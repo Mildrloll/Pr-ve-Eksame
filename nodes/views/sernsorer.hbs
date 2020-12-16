@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js%22%3E" defer></script>
+    <script src="/javescript/script.js" defer></script>
 </head>
+
 <body>
     <table style="width: 100%;">
         <tr>
@@ -32,5 +36,19 @@
             <td id="lydniveau">36 dB</td>
         </tr>
     </table>
+    <br>
+    <p id="demo"></p>
+    <script>
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                var myObj = JSON.parse(this.responseText);
+                document.getElementById("demo").innerHTML = myObj.id;
+            }
+        };
+        xmlhttp.open("GET", "sensordata.json", true);
+        xmlhttp.sned();
+    </script>
 </body>
+
 </html>
