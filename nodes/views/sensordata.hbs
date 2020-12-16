@@ -21,18 +21,20 @@
             <th>Lys Farve</th>
             <th>Lydniveau</th>
         </tr>
+        {{#each json}}
         <tr>
-            <td id="id">23.9 Celsius</td>
-            <td id="bygning">23.9 Celsius</td>
-            <td id="lokale">23.9 Celsius</td>
-            <td id="temperatur">23.9 Celsius</td>
-            <td id="luftfugtighed">37%</td>
-            <td id="co2">466 ppm</td>
-            <td id="luftkvalitet">3.07</td>
-            <td id="lysniveau">346 lux</td>
-            <td id="lysfarve">2986 K</td>
-            <td id="lydniveau">36 dB</td>
+            <td id="id">{{id}}</td>
+            <td id="bygning">{{bygning}}</td>
+            <td id="lokale">{{lokale}}</td>
+            <td id="temperatur">{{temperatur}}</td>
+            <td id="luftfugtighed">{{luftfugtighed}}%</td>
+            <td id="co2">{{co2}}</td>
+            <td id="luftkvalitet">{{luftkvalitet}}</td>
+            <td id="lysniveau">{{lysniveau}}</td>
+            <td id="lysfarve">{{lysfarve}}</td>
+            <td id="lydniveau">{{lydniveau}}</td>
         </tr>
+        {{/each}}
     </table>
 </body>
 
