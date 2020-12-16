@@ -11,10 +11,10 @@ table, th, td {
   border: 1px solid black;
 }
 
-#orange{
+#luftkvalitet{
   color:orange;
 }
 
-#red{
+#lydniveau{
   color:red;
 }
